@@ -9,7 +9,7 @@ class Startup {
     }
     
     private static doSomething(){
-        console.log(os.loadavg()[0]);
+        console.log(os.loadavg()[0] );
     }
 }
 
