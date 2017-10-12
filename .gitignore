@@ -59,3 +59,4 @@ typings/
 
 # ignore compiled (form typescript) javascript files in src
 ./src/*.js
+src/*.js

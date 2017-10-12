@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    /* Basic Options */
-    "target": "es5",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'. */
-    "module": "commonjs",                     /* Specify module code generation: 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
-    
-
-    /* Strict Type-Checking Options */
-    "strict": true,                            /* Enable all strict type-checking options. */
-    
-     "typeRoots": ["node_modules/@types"],                       /* List of folders to include type definitions from. */
-     "types": ["node"]                           /* Type declaration files to be included in compilation. */
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ]
   }
 }
