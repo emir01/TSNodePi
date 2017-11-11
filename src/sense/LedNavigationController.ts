@@ -1,12 +1,11 @@
-var sense = require("sense-hat-led");
+var senseLed = require("sense-hat-led");
 var senseJoystick = require('sense-joystick');
+
 
 import { Colors } from '../constants/colors';
 import { Keys } from '../constants/keys';
 
 export class LedNavigationController {
-
-    private ledIsActive: boolean = false;
     private colorService = new Colors();
 
     private x: number = 0;
@@ -20,7 +19,7 @@ export class LedNavigationController {
     private playerColor: Array<number> = [255, 255, 255];
 
     private setLed(color: Array<number>) {
-        sense.clear(color);
+        senseLed.clear(color);
     }
 
     private ResetMatrix() {
@@ -56,13 +55,12 @@ export class LedNavigationController {
 
         var index = x * this.xMax + y;
         this.pixelMatrix[index] = this.playerColor;
-
     }
 
     public boot() {
         this.ResetMatrix();
         this.SetCurrentPosition(this.x, this.y);
-        sense.setPixels(this.pixelMatrix);
+        senseLed.setPixels(this.pixelMatrix);
 
         senseJoystick.getJoystick()
             .then((joystick: any) => {
@@ -116,7 +114,7 @@ export class LedNavigationController {
 
                     this.ResetMatrix();
                     this.SetCurrentPosition(this.x, this.y);
-                    sense.setPixels(this.pixelMatrix);
+                    senseLed.setPixels(this.pixelMatrix);
                 });
             });
     }

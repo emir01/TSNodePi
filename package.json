@@ -4,11 +4,10 @@
   "description": "NodeTypescriptSetup",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc ./src/index.ts && node ./src/index.js"
+      "start": "tsc ./src/index.ts && node ./src/index.js"
   },
-  "author": "EmirO",
-  "license": "ISC",
+  "author": "EmirOsmanoski",
+  "license": "MIT",
   "dependencies": {
     "@types/node": "^8.0.16",
     "node-sense-hat": "0.0.2",
